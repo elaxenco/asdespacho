@@ -79,6 +79,12 @@ async function cargarAyuntamientos() {
                       title="" data-toggle="modal" data-target="#modalAyuntamientos" >
                     <i class="fa fa-edit"></i>
                 </button>
+                
+                <button  onclick='editarAyuntamiento(${element.id},"${element.descripcion}",${element.sucursale.zona_id},${element.sucursale.id},"${element.domicilio}")'
+                    type="button" class="btn  border border-secondary"
+                      title="" data-toggle="modal" data-target="#modalAyuntamientos" >
+                    <i class="fa fa-edit"></i>
+                </button>
           </div>
         </td></tr>`
     }) 
