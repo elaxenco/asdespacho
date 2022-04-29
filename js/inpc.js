@@ -54,7 +54,3 @@ async function cargarInpc(){
 
     document.getElementById('tbInpc').innerHTML = htmlIncp? htmlIncp: ''
 }
-
-async function guardarInpc(){
-
-}

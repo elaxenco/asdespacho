@@ -26,8 +26,6 @@
 
       <div class="collapse" id="collapsCatalogos">   
         <a id="m_ayuntamientos" href="../catalogos/ayuntamientos.php" class=" list-group-item list-group-item-action sm-bg-theme menu-pading"><i class="fa fa-list-ul"></i> Ayuntamientos</a>
-        <a id="m_notificadores" href="../catalogos/notificadores.php" class=" list-group-item list-group-item-action sm-bg-theme menu-pading"><i class="fa fa-list-ul"></i> Notificadores</a>
-
       </div> 
     <!-- /CATALOGOS -->
 
