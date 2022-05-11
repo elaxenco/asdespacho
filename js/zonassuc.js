@@ -179,10 +179,10 @@ function cargarModelos() {
 }
 // Editar sucursal modelo
 function asignarModelo(sucursal_id, descripcion, modelo_id) {
-    document.getElementById('txtIdSucursalModelo').value = sucursal_id;
-    document.getElementById('txtSucursalModelo').value = descripcion;
-    document.getElementById('cboModelos').value = modelo_id;
-    $('#modalAsignarModelo').modal('show');
+    document.getElementById('txtIdSucursalModelo').value = sucursal_id
+    document.getElementById('txtSucursalModelo').value = descripcion
+    document.getElementById('cboModelos').value = modelo_id
+    $('#modalAsignarModelo').modal('show')
 }
 // Guardar sucursal modelo
 function guardarSucursalModelo() {

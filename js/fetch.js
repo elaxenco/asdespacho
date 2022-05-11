@@ -1,5 +1,5 @@
 
-const URL = 'https://82a7-45-230-173-209.ngrok.io'
+const URL = 'http://localhost:5005'
 const ajax = {}
 
 ajax.post = async (ruta,datos)=>{  
@@ -29,6 +29,17 @@ ajax.put = async (ruta,datos)=>{
         body: JSON.stringify(datos),
         headers: {
             'Content-Type': 'application/json'
+        }  
+    }).then(r=>{return r.json() })
+    .then(r=>{return r}) 
+}
+
+ajax.files = async (ruta,datos)=>{  
+    return await fetch(`${URL}${ruta}`, {
+        method: 'POST',
+        body: datos,
+        headers: {
+            'Content-Type': "multipart/form-data"
         }  
     }).then(r=>{return r.json() })
     .then(r=>{return r}) 

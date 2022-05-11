@@ -90,6 +90,8 @@
     <script type="text/javascript" src="../js/lib/toastr.min.js"></script>
     <script type="text/javascript" src="../js/lib/sweetalert.js"></script>
     <script type="text/javascript" src="../js/fetch.js"></script> 
+    
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
     <script type="text/javascript" src="../js/contribuyentes.js"></script> 
 
 </body>

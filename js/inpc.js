@@ -9,7 +9,7 @@ function agregarIncp(){
 
 async function generarInpc(){
     const formulariInpc = document.getElementById('formIncp')
-    const datos = new FormData(formulariInpc);
+    const datos = new FormData(formulariInpc)
  
     const jsonDatos = Object.fromEntries(datos.entries())
     const respuest = await ajax.post('/inpc',jsonDatos)

@@ -145,7 +145,7 @@
                     <div class="col-4"> 
                         </div>
                         <div class="col-4">
-                             <button onclick="agregarTarifa()" type="button" class="btn btn-primary btn-lg btn-block">Agregar Trifa</button>
+                             <button onclick="agregarTarifa()" type="button" class="btn btn-primary btn-lg btn-block">Agregar Tarifa</button>
                         </div>
                         <div class="col-4"> 
                         </div>
