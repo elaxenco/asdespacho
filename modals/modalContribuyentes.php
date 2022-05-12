@@ -85,7 +85,7 @@
                         </div> 
                         <div class="col-12">
                             <br>
-                            <input type="file"  accept=".xlsx, .xls, .csv" id="inputExcel" name="excel"/>
+                            <input type="file"  accept=".xlsx, .xls, .csv" id="inputExcel" name="excel" class="d-none"/>
                             <br> 
                         </div>
                         <div class="col-12">
@@ -94,7 +94,7 @@
                                         <div class="col-md-4 col-12"> 
                                         </div>
                                         <div class="col-md-4 col-12">
-                                            <button onclick="verificarExcel(false)" type="button" class="btn btn-primary btn-lg btn-block">Verificar Excel</button>
+                                            <button onclick="verificarExcel(false)" type="button" class="btn btn-primary btn-lg btn-block d-none" id="btnExcel">Verificar Excel</button>
                                         </div>
                                         <div class="col-md-4 col-12"> 
                                         </div>
@@ -134,7 +134,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button onclick="verificarExcel(true)" type="button" class="btn btn-success">Guardar Base</button>
+                <button onclick="verificarExcel(true)" type="button" class="btn btn-success d-none" id="btnGuardarExcel">Guardar Base</button>
             </div>
         </div>
     </div>

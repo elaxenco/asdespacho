@@ -64,6 +64,11 @@ async function cargarBases(){
                     type="button" class="btn  border border-secondary"
                       title="" data-toggle="modal" data-target="#modalCargarBase" > 
                       <i class="fa fa-file-upload"></i>
+                </button> 
+                <button  onclick='modalExcelVer(${element.id},${element.anio_base},"${element.descripcion}")'
+                    type="button" class="btn  border border-secondary"
+                      title="" data-toggle="modal" data-target="#modalCargarBase" >  
+                      <i class="fa fa-search"></i>
                 </button>
           </div>
         </td></tr>`
@@ -85,8 +90,40 @@ async function modalExcel(id,anio,descripcion){
     document.getElementById('txtBaseIdExcel').value = id
     document.getElementById('txtAnioExcel').value = anio
     document.getElementById('txtDescripconBaseExcel').value = descripcion
+    document.getElementById('btnGuardarExcel').classList.remove('d-none')
+    document.getElementById('inputExcel').classList.remove('d-none')
+    document.getElementById('btnExcel').classList.remove('d-none')
 } 
-let selectedFile
+
+async function modalExcelVer(id,anio,descripcion){
+    document.getElementById('txtBaseIdExcel').value = id
+    document.getElementById('txtAnioExcel').value = anio
+    document.getElementById('txtDescripconBaseExcel').value = descripcion
+    
+    document.getElementById('btnGuardarExcel').classList.add('d-none')
+    document.getElementById('inputExcel').classList.add('d-none')
+    document.getElementById('btnExcel').classList.add('d-none')
+    const base = await ajax.get(`/contribuyentes/base/`+id)
+    let htmlBase = ''
+    base.datos.forEach(element => {
+        htmlBase +=  `<tr>
+            <td class="text-center">${element.clave_catastral}</td>
+            <td>${element.nombre_contribuyente ? element.nombre_contribuyente : ''}</td>  
+            <td>${element.domicilio_ubicacion ? element.domicilio_ubicacion : ''}</td>  
+            <td>${element.domicilio_notificar ? element.domicilio_notificar : ''}</td> 
+            <td>${element.superficie_terreno ? element.superficie_terreno : ''}</td>  
+            <td>${element.superficie_construccion ? element.superficie_construccion : ''}</td>  
+            <td>${element.valor_gravable ? element.valor_gravable : ''}</td>  
+            <td>${element.principal_sin_dscto ? element.principal_sin_dscto : ''}</td>  
+            <td>${element.valor_catastral ? element.valor_catastral : ''}</td>  
+            <td>${element.valor_terreno ? element.valor_terreno : ''}</td>  
+            <td>${element.valor_construccion ? element.valor_construccion : ''}</td>  
+        </tr>`
+
+        
+     })
+      document.getElementById("tbExcel").innerHTML = htmlBase ? htmlBase :'' 
+} 
 
 /*document.getElementById('inputExcel').addEventListener("change", (event) => {
     selectedFile = event.target.files[0]
@@ -99,7 +136,7 @@ async function saveExcel(data){
     console.log('se llevo')
     console.log(data)
 
-    const respuest = await ajax.post('/guardarbase',data)
+    const respuest = await ajax.post('/guardarbase',{datos : data , base_id :id} )
     console.log(respuest)
         
 }
@@ -123,7 +160,7 @@ async function verificarExcel(verificar){
                 rowObject[i].anio_base = anio
                 rowObject[i].base_id = id
                 rowObject[i].capturista_id  = USUARIO_ID
-                
+
                 Object.keys(rowObject[i]).forEach((key) => {
 
                     var replacedKey = key.toLowerCase().trim().replace(' ', "_").replace(' ', "_").replace(' ', "_") 
