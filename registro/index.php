@@ -59,7 +59,6 @@
                                     <tr>
                                         <th scope="col" class="text-center">ID</th>
                                         <th scope="col" class="text-center">Descripcion</th> 
-                                        <th scope="col" class="text-center">Notificador</th> 
                                         <th scope="col" class="text-center">Ayuntamiento</th> 
                                         <th scope="col" class="text-center">Contribuyentes</th>
                                         <th scope="col" class="text-center">Año</th>
@@ -92,7 +91,7 @@
     <script type="text/javascript" src="../js/fetch.js"></script> 
     
     <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
-    <script type="text/javascript" src="../js/contribuyentes.js"></script> 
+    <script type="text/javascript" src="../js/registro.js"></script> 
 
 </body>
 

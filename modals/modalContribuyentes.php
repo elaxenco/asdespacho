@@ -111,8 +111,8 @@
                                         <tr>
                                             <th class="text-center">Cve Catastral</th>
                                             <th class="text-center">Nombre</th>
-                                            <th class="text-center">Dom Ubi</th>
-                                            <th class="text-center">Dom Notif</th>
+                                            <th class="text-center">Dom Ubicacion</th>
+                                            <th class="text-center">Dom Notificar</th>
                                             <th class="text-center">Sup Terreno</th>
                                             <th class="text-center">Sup Construc</th>
                                             <th class="text-center">Val Gravable</th>

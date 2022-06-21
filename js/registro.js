@@ -49,7 +49,6 @@ async function cargarBases(){
         htmlBase +=  ` <tr>
         <td class="text-center">${element.id}</td>
         <td>${element.descripcion}</td>
-        <td>${element.usuario.primer_nombre} ${element.usuario.appaterno}</td>
         <td>${element.ayuntamiento.descripcion}</td>
         <td>${element.contribuyentes!=null ? element.contribuyentes : 0 }</td>
         <td>${element.anio_base}</td> 
